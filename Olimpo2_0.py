@@ -17,7 +17,7 @@ class Personaje:
         defensa = random.choice(self.defensas)
         return defensa
 
-# Clase hijo (jugadors)
+# Clase hijo (jugadores)
 class Zeus(Personaje):
     def __init__(self):
         super().__init__(
@@ -48,7 +48,7 @@ class Atenea(Personaje):
             [("Escudo aegis", 22), ("Postura defensiva", 9)]
         )
 
-# Clases para enemigos
+# Clases hijo (enemigos), tiene las mismas funciones que los jugadores
 class Enemigo(Personaje):
     pass
 
@@ -61,6 +61,7 @@ enemigos = [
             [("Barrera titánica", 25), ("Resistencia salvaje", 12)])
 ]
 
+# Función para seleccionar el personaje
 def seleccionar_personaje():
     opciones = [Zeus(), Hera(), Atenea()]
     print("¡Elige tu personaje!\n")
@@ -69,10 +70,13 @@ def seleccionar_personaje():
     eleccion = int(input("\nSelecciona el número de tu personaje: ")) - 1
     return opciones[eleccion]
 
+
+# Función para la batalla
 def batalla(jugador, enemigo):
     print(f"\nHas elegido a {jugador.nombre}: {jugador.descripcion}")
     print(f"\nTu enemigo será: {enemigo.nombre}.\n")
 
+# Ciclo de la batalla (hasta quela vida de uno de los dos llegue a 0)
     while jugador.vida > 0 and enemigo.vida > 0:
         print(f"\n--- {jugador.nombre} vs {enemigo.nombre} ---")
         print(f"Vida de {jugador.nombre}: {jugador.vida}")
@@ -87,6 +91,7 @@ def batalla(jugador, enemigo):
         defensa_enemigo = 0
         dano_jugador = 0
         dano_enemigo = 0
+
 
         if accion_jugador == 1:
             print("Selecciona tu ataque:")
