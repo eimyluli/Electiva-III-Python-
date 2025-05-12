@@ -16,3 +16,12 @@ Enemigos posibles Némesis – Justicia divina en forma de venganza.
 Minotauro – Fuerza bruta y resistencia.
 
 Titán Tifón – Un desafío colosal.
+
+Versiones
+
+**v1.0**: Juego funcional con estructura básica (sin clases ni funciones).
+**v2.0**: Código optimizado con uso de **clases**, **herencia** y **funciones** para una mejor organización y mantenimiento.
+
+ Archivos
+`Olimpo.py`: Versión original del juego.
+`Olimpo2_0.py`: Versión mejorada con clases y funciones.
